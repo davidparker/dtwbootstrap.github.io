@@ -1,6 +1,43 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+title: Dave The Walker
+subtitle: ...Feet hurt a bit
+author: davethecoder
+#avatar_url: https://2.gravatar.com/avatar/cdf546b601bf29a7eb4ca777544d11cd?s=160 # Should be 160x160px.
+# email: your-email@domain.com  # Comment out this line if you don't want to expose your email.
+description: > # this means to ignore newlines until "twitter_username:"
+  Davethewalker is a blog about hiking and thu-hiking mainly in the UK
+#repository: davidparker/davethewalker.github.io
+
+
+# Homepage
+show_excerpts: true  # set to true to show excerpts on the homepage, otherwise full posts are shown
+
+#
+# Jekyll Settings
+#
+permalink: /archive/:year/:month/:day/:title/
+paginate: 2
+page_group_size: 5 # number of pages to group by in the pagination.
+paginate_path: "/archive/page/:num"
+category_dir: categories
+
+# Build settings
+markdown: kramdown
+kramdown:
+  hard_wrap: false
+
+exclude: [README.md CODE_OF_CONDUCT.md script .gitattributes .gitignore keybase.txt RakeFile]
+keep_files: [robots.txt favicon.ico]
+incremental: true
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-include-cache
 
 
 sass:
